@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PocketSmart - Money Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>💰 PocketSmart</h1>
+      <p>Smart money management starts here!</p>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Total Balance</h3>
+        <p id="balance">₹0</p>
+      </div>
+
+      <div class="card">
+        <h3>Total Income</h3>
+        <p id="income">₹0</p>
+      </div>
+
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <p id="expenses">₹0</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Add Transaction</h2>
+      <form id="transaction-form">
+        <input type="text" id="description"
+          placeholder="Transaction name" required>
+
+        <input type="number" id="amount"
+          placeholder="Amount (₹)" min="0.01"
+          step="0.01" required>
+
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+
+        <button type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="card" style="margin-top: 20px;">
+      <h2>Recent Transactions</h2>
+      <ul id="transaction-list">
+        <li>No transactions yet.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
